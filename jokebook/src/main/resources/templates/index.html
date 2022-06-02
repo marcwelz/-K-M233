@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
     <title>Jokebook</title>
 </head>
 <body>
-    <h1>Hello Jokebook</h1>
-    <h2>Good Morningg</h2>
-
-    <table>
-        <tr>
-            <th>TEXT</th>
-            <th>RATING</th>
-            <th>DATE</th>
-        </tr>
-        <tr th:each="jokes : ${jokes}">
-            <td th:text="${jokes.text}"></td>
-            <td th:text="${jokes.rating}"></td>
-            <td th:text="${jokes.date}"></td>
-        </tr>
-    </table>
+    <h1 style="text-align: center">Jokebook</h1>
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">TEXT</th>
+                <th scope="col">RATING</th>
+                <th scope="col">DATE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="jokes : ${jokes}">
+                <th scope="row" th:text="${jokes.id}"></th>
+                <td th:text="${jokes.text}"></td>
+                <td th:text="${jokes.rating}"></td>
+                <td th:text="${jokes.date}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

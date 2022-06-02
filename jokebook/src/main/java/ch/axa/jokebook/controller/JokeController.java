@@ -16,7 +16,6 @@ public class JokeController {
 
     @GetMapping("/")
     public String getJokes(Model model) {
-        System.out.println("getJokes");
         model.addAttribute("jokes", service.getJokes());
         return "index";
     }
