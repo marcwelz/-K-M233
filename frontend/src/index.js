@@ -6,6 +6,7 @@ import TodoList from './components/todoLost/TodoList';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Album from './components/album/Album';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/todo" element={<TodoList />} />
+        <Route path="/album" element={<Album />} />
       </Routes>
     </Router>
   </React.StrictMode>
