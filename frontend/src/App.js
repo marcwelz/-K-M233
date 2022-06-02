@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [inputWord, setInputWord] = useState("")
+
+  useEffect(() => {
+    // ohne Paramater => unendlich ausführen, mit Parameter => nur einmal ausführen
+    fetchData()
+  }, [])
+
+  function fetchData() {
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+      <h1>Hallo</h1>
+      <input type="text" value={inputWord} placeholder='Gib deine Antwort ein...' onChange={e => setInputWord(e.target.value)}></input>
+      {inputWord}
     </div>
   );
 }
