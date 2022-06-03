@@ -5,5 +5,4 @@ import org.springframework.data.repository.CrudRepository;
 
 @org.springframework.stereotype.Repository
 public interface ModulRepository extends CrudRepository<Modul, Integer> {
-
 }

@@ -19,10 +19,10 @@
                         Bootstrap
                     </a>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/students">Student <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/student">Student <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Faculty</a>
+                        <a class="nav-link" href="faculty">Faculty</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/modules">Modul</a>
@@ -30,6 +30,12 @@
                 </ul>
             </div>
         </nav>
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Enter ID from a student</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" onkeyup="handleInput()" placeholder="Enter studen id...">
+            </div>
+        </form>
         <table class="table">
             <thead>
             <tr>
@@ -44,18 +50,26 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="students : ${students}">
-                <th scope="row" th:text="${students.id}"></th>
-                <td th:text="${students.firstname}"></td>
-                <td th:text="${students.lastname}"></td>
-                <td th:text="${students.street}"></td>
-                <td th:text="${students.zipcode}"></td>
-                <td th:text="${students.city}"></td>
-                <td th:text="${students.phone}"></td>
-                <td th:text="${students.birthdayDate}"></td>
+            <tr th:each="student : ${students}">
+                <th scope="row" th:text="${student.id}"></th>
+                <td th:text="${student.firstname}"></td>
+                <td th:text="${student.lastname}"></td>
+                <td th:text="${student.street}"></td>
+                <td th:text="${student.zipcode}"></td>
+                <td th:text="${student.city}"></td>
+                <td th:text="${student.phone}"></td>
+                <td th:text="${student.birthdayDate}"></td>
             </tr>
             </tbody>
         </table>
     </div>
+
+    <script th:inline="javascript">
+        function handleInput() {
+            const inputValue = document.getElementById("formGroupExampleInput").value
+            document.getElementById("formGroupExampleInput").value = ""
+            window.location.href = "http://localhost:8080/student/get=" + inputValue
+        }
+    </script>
 </body>
 </html>

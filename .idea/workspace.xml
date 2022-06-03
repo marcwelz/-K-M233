@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c49771e-6849-447b-b82b-4710d33c232e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="1c49771e-6849-447b-b82b-4710d33c232e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,17 +54,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Datenpersitenz" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="-K-M233" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="backend.datenpersistenz.src.main.java.ch.axa.university.DatenpersistenzApplication" />
@@ -90,6 +75,7 @@
       <workItem from="1654151871042" duration="381000" />
       <workItem from="1654239485679" duration="615000" />
       <workItem from="1654240190902" duration="208000" />
+      <workItem from="1654255723810" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="init db">
       <created>1654152287846</created>
@@ -98,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654152287846</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="checked in newsest changess">
+      <created>1654255736586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654255736586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init db" />
-    <option name="LAST_COMMIT_MESSAGE" value="init db" />
+    <MESSAGE value="checked in newsest changess" />
+    <option name="LAST_COMMIT_MESSAGE" value="checked in newsest changess" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="262" width="1071" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1654240396181">
@@ -153,10 +147,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="448" y="178" key="SettingsEditor/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654152461636" />
-    <state x="560" y="333" key="Vcs.Push.Dialog.v2" timestamp="1654152289263">
+    <state x="560" y="333" key="Vcs.Push.Dialog.v2" timestamp="1654255738123">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="560" y="333" key="Vcs.Push.Dialog.v2/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654152289263" />
+    <state x="560" y="333" key="Vcs.Push.Dialog.v2/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654255738123" />
     <state x="625" y="271" key="search.everywhere.popup" timestamp="1654239921595">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

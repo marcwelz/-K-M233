@@ -3,11 +3,11 @@
 <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
-    <title>Modul</title>
+    <title>Enrollment</title>
 </head>
 <body>
 <div style="text-align: center">
-    <h1>Modul</h1>
+    <h1>Enrollment</h1>
     <h3>Marc Welz</h3>
 </div>
 <div class="container">
@@ -19,13 +19,16 @@
                     Bootstrap
                 </a>
                 <li class="nav-item">
-                    <a class="nav-link" href="/student">Student <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/students">Student <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Faculty</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/modules">Modul</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/enrollment">Enrollment</a>
                 </li>
             </ul>
         </div>
@@ -34,17 +37,15 @@
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">SHORTNAME</th>
-                <th scope="col">TITLE</th>
-                <th scope="col">ECTS POINTS</th>
+                <th scope="col">MODULID</th>
+                <th scope="col">STUDENTID</th>
             </tr>
         </thead>
         <tbody>
-            <tr th:each="modul : ${modules}">
-                <th scope="row" th:text="${modul.id}"></th>
-                <td th:text="${modul.shortname}"></td>
-                <td th:text="${modul.title}"></td>
-                <td th:text="${modul.ects_points}"></td>
+            <tr th:each="enrollment : ${enrollments}">
+                <th scope="row" th:text="${enrollment.id}"></th>
+                <td th:text="${enrollment.modulIdfs}"></td>
+                <td th:text="${enrollment.studentIdfs}"></td>
             </tr>
         </tbody>
     </table>
