@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -20,4 +21,7 @@ public class Faculty implements Serializable {
     private int id;
 
     private String description;
+
+    @OneToMany(mappedBy="faculty")
+    private List<Student> students;
 }

@@ -1,6 +1,6 @@
 package ch.axa.university.controller;
 
-import ch.axa.university.service.JokeService;
+import ch.axa.university.service.UniversityService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,11 +12,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 @AllArgsConstructor
 public class JokeController {
 
-    private final JokeService service;
+    private final UniversityService service;
 
-    @GetMapping("/")
-    public String getJokes(Model model) {
-        model.addAttribute("jokes", service.getJokes());
+    @GetMapping("/students")
+    public String getStudents(Model model) {
+        model.addAttribute("students", service.getAllStudents());
         return "index";
+    }
+
+    @GetMapping("/modules")
+    public String getModules(Model model) {
+        model.addAttribute("modules", service.getAllModules());
+        return "modul";
     }
 }

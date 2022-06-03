@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -20,10 +21,6 @@ public class Student implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @ManyToMany
-    @JoinColumn(name = "faculty_IDFS")
-    private Faculty faculty;
-
     @Column(name = "matriculation_number")
     private int matriculationNumber;
 
@@ -35,5 +32,13 @@ public class Student implements Serializable {
     private String phone;
 
     @Column(name = "birthday_date")
-    private Date date;
+    private Date birthdayDate;
+
+    @ManyToOne()
+    @JoinColumn(name="faculty_idfs")
+    private Faculty faculty;
+
+    @ManyToMany(mappedBy="students")
+    private List<Modul> moduls;
+
 }

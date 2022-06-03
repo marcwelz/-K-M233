@@ -3,29 +3,56 @@
 <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
-    <title>Jokebook</title>
+        <title>Students</title>
 </head>
 <body>
     <div style="text-align: center">
-        <h1>Jokebook</h1>
+        <h1>Student</h1>
         <h3>Marc Welz</h3>
     </div>
     <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Bootstrap
+                    </a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/students">Student <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/modules">Modul</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">TEXT</th>
-                <th scope="col">RATING</th>
-                <th scope="col">DATE</th>
+                <th scope="col">FIRSTNAME</th>
+                <th scope="col">LASTNAME</th>
+                <th scope="col">STREET</th>
+                <th scope="col">ZIPCCODE</th>
+                <th scope="col">CITY</th>
+                <th scope="col">PHONE</th>
+                <th scope="col">BIRTHDAY</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="jokes : ${jokes}">
-                <th scope="row" th:text="${jokes.id}"></th>
-                <td th:text="${jokes.text}"></td>
-                <td th:text="${jokes.rating}"></td>
-                <td th:text="${jokes.date}"></td>
+            <tr th:each="students : ${students}">
+                <th scope="row" th:text="${students.id}"></th>
+                <td th:text="${students.firstname}"></td>
+                <td th:text="${students.lastname}"></td>
+                <td th:text="${students.street}"></td>
+                <td th:text="${students.zipcode}"></td>
+                <td th:text="${students.city}"></td>
+                <td th:text="${students.phone}"></td>
+                <td th:text="${students.birthdayDate}"></td>
             </tr>
             </tbody>
         </table>
