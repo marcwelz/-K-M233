@@ -1,4 +1,4 @@
-package ch.axa.Datenpersistenz;
+package ch.axa.university;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

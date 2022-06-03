@@ -1,6 +1,6 @@
-package ch.axa.Datenpersistenz.repository;
+package ch.axa.university.repository;
 
-import ch.axa.Datenpersistenz.model.Joke;
+import ch.axa.university.model.Joke;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package ch.axa.Datenpersistenz.controller;
+package ch.axa.university.controller;
 
-import ch.axa.Datenpersistenz.service.JokeService;
+import ch.axa.university.service.JokeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

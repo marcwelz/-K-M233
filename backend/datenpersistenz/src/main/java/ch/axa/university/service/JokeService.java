@@ -1,7 +1,7 @@
-package ch.axa.Datenpersistenz.service;
+package ch.axa.university.service;
 
-import ch.axa.Datenpersistenz.model.Joke;
-import ch.axa.Datenpersistenz.repository.JokeRepository;
+import ch.axa.university.model.Joke;
+import ch.axa.university.repository.JokeRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
