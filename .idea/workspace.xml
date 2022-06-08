@@ -77,6 +77,7 @@
       <workItem from="1654240190902" duration="208000" />
       <workItem from="1654255723810" duration="20000" />
       <workItem from="1654267507744" duration="23000" />
+      <workItem from="1654669308158" duration="1421000" />
     </task>
     <task id="LOCAL-00001" summary="init db">
       <created>1654152287846</created>
@@ -99,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654267524172</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="innit project">
+      <created>1654678189571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654678189571</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,13 +129,14 @@
     <MESSAGE value="init db" />
     <MESSAGE value="checked in newsest changess" />
     <MESSAGE value="checked in newest files before wochenende :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="checked in newest files before wochenende :)" />
+    <MESSAGE value="innit project" />
+    <option name="LAST_COMMIT_MESSAGE" value="innit project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="262" width="1071" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1654240396181">
+    <state x="553" y="222" width="1071" height="922" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1654679706341">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="560" y="262" width="1071" height="882" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654240396181" />
+    <state x="553" y="222" width="1071" height="922" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654679706341" />
     <state x="883" y="348" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1654240053063">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -156,10 +165,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="448" y="178" key="SettingsEditor/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654152461636" />
-    <state x="560" y="333" key="Vcs.Push.Dialog.v2" timestamp="1654267525714">
+    <state x="560" y="333" key="Vcs.Push.Dialog.v2" timestamp="1654678190754">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="560" y="333" key="Vcs.Push.Dialog.v2/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654255738123" />
+    <state x="560" y="333" key="Vcs.Push.Dialog.v2/1920.325.1440.875/-1920.25.1920.1175/0.0.1920.1200@0.0.1920.1200" timestamp="1654678190754" />
     <state x="560" y="333" key="Vcs.Push.Dialog.v2/1920.325.1440.875/0.0.1920.1200/-1920.25.1920.1175@0.0.1920.1200" timestamp="1654267525714" />
     <state x="625" y="271" key="search.everywhere.popup" timestamp="1654239921595">
       <screen x="0" y="0" width="1920" height="1200" />
