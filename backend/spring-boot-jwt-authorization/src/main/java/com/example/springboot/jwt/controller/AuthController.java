@@ -23,7 +23,8 @@ import java.util.stream.Collectors;
  *
  * @author imesha
  */
-@CrossOrigin(origins = {"${app.security.cors.origin}"})
+//@CrossOrigin(origins = {"${app.security.cors.origin}"})
+@CrossOrigin()
 @RestController
 public class AuthController {
 
