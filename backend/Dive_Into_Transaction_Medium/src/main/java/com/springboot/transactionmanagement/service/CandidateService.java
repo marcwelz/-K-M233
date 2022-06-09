@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 
 @Service
-//@Transactional
+@Transactional
 public class CandidateService {
 
     @Autowired
@@ -17,7 +17,7 @@ public class CandidateService {
     public CandidateModel saveCandidate(CandidateModel model) {
         CandidateModel candidateModel = candidateRepository.save(model);
         try {
-            int a = 12 / 0;
+            int a = 12 / 3;
         } catch (Exception e){
             throw new RuntimeException(e.getMessage());
         }

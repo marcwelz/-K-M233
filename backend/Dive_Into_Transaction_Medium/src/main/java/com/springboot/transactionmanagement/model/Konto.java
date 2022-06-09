@@ -15,13 +15,11 @@ import javax.persistence.Id;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CandidateModel {
+public class Konto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer candidateid;
+    private Integer kontoid;
     private String name;
-    private String age;
-    private String gender;
-
+    private int saldo;
 }
