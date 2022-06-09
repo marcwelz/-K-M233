@@ -1,9 +1,6 @@
 package com.springboot.transactionmanagement.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +12,7 @@ import javax.persistence.Id;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Konto {
 
     @Id
@@ -22,4 +20,5 @@ public class Konto {
     private Integer kontoid;
     private String name;
     private int saldo;
+
 }

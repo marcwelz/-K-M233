@@ -1,4 +1,4 @@
-package com.example.springboot.jwt.entity;
+package ch.axa.university.security.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

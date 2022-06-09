@@ -33,7 +33,7 @@ public class KontoController {
         return kontoService.getAllSaldi();
     }
 
-    @GetMapping("/transaction")
+    @PutMapping("/transaction")
     public void transaction(@RequestBody TranscationalModel model){
         kontoService.moveMoney(model);
     }

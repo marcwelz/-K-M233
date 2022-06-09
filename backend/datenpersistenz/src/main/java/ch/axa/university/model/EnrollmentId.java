@@ -14,6 +14,7 @@ import java.util.Objects;
 @Getter
 @Setter
 public class EnrollmentId implements Serializable {
+
     private static final long serialVersionUID = -1289223640605767562L;
     @Column(name = "modul_IDFS", nullable = false)
     private Integer modulIdfs;

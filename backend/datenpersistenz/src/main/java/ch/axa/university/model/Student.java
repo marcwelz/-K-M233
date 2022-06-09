@@ -1,5 +1,6 @@
 package ch.axa.university.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,7 +12,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name = "student")
 public class Student implements Serializable {
@@ -36,6 +36,7 @@ public class Student implements Serializable {
 
     @ManyToOne()
     @JoinColumn(name="faculty_idfs")
+    @JsonIgnore
     private Faculty faculty;
 
     @ManyToMany(mappedBy="students")

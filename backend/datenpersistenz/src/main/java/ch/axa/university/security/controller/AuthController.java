@@ -1,17 +1,20 @@
-package com.example.springboot.jwt.controller;
+package ch.axa.university.security.controller;
 
-import com.example.springboot.jwt.WebSecurityConfig;
-import com.example.springboot.jwt.controller.resource.LoginResult;
-import com.example.springboot.jwt.entity.LoginData;
-import com.example.springboot.jwt.security.JwtHelper;
+import ch.axa.university.security.JwtHelper;
+import ch.axa.university.security.WebSecurityConfig;
+import ch.axa.university.security.entity.LoginData;
+import ch.axa.university.security.entity.LoginResult;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.HashMap;
@@ -23,23 +26,16 @@ import java.util.stream.Collectors;
  *
  * @author imesha
  */
-//@CrossOrigin(origins = {"${app.security.cors.origin}"})
-@CrossOrigin()
+@CrossOrigin(origins = {"${app.security.cors.origin}"})
 @RestController
+@AllArgsConstructor
 public class AuthController {
 
     private final JwtHelper jwtHelper;
     private final UserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
 
-    public AuthController(JwtHelper jwtHelper, UserDetailsService userDetailsService,
-                          PasswordEncoder passwordEncoder) {
-        this.jwtHelper = jwtHelper;
-        this.userDetailsService = userDetailsService;
-        this.passwordEncoder = passwordEncoder;
-    }
-
-    @PostMapping(path = "login")
+    @PostMapping(path = "/login")
     public LoginResult login(@RequestBody LoginData loginData) {
 
         UserDetails userDetails;

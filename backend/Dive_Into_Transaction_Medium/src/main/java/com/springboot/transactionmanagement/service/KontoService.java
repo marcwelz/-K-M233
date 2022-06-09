@@ -38,15 +38,21 @@ public class KontoService {
     }
 
     public void moveMoney(TranscationalModel model){
+        withdraw(model);
+        deposit(model);
+    }
 
-        Konto from = kontoRepository.findById(model.getFromId()).get();
-        from.setSaldo(from.getSaldo()- model.getAmount());
+    private void withdraw(TranscationalModel model) {
+        Konto sender = kontoRepository.findById(model.getFromId()).get();
+        sender.setSaldo(sender.getSaldo()- model.getAmount());
 
-        kontoRepository.save(from);
+        kontoRepository.save(sender);
+    }
 
-        Konto to = kontoRepository.findById(model.getToId()).get();
-        to.setSaldo(to.getSaldo()+ model.getAmount());
+    private void deposit(TranscationalModel model) {
+        Konto reciever = kontoRepository.findById(model.getToId()).get();
+        reciever.setSaldo(reciever.getSaldo()+ model.getAmount());
 
-        kontoRepository.save(to);
+        kontoRepository.save(reciever);
     }
 }

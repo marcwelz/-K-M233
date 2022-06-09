@@ -1,5 +1,6 @@
 package ch.axa.university.service;
 
+import ch.axa.university.model.Faculty;
 import ch.axa.university.model.Student;
 import ch.axa.university.repository.StudentRepository;
 import lombok.AllArgsConstructor;
@@ -17,8 +18,8 @@ public class StudentService {
         return repository.findAll();
     }
 
-    public Optional<Student> getStudentById(int id) {
-        return repository.findById(id);
+    public Student getStudentById(int id) {
+        Optional<Student> student = repository.findById(id);
+        return student.isEmpty() ? null : student.get();
     }
-
 }
