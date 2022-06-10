@@ -2,7 +2,7 @@ import './style.css';
 import React, { useEffect, useState } from "react";
 import Cookies from 'universal-cookie';
 
-function Navigate() {
+function Navigate(props) {
     const cookies = new Cookies();
   return (
     <div className="navigate">
@@ -22,13 +22,13 @@ function Navigate() {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class={props.active == "1" ? "nav-item active": "nav-item"}>
                             <a class="nav-link" href="/students">Students</a>
                         </li>
-                        <li class="nav-item">
+                        <li class={props.active == "2" ? "nav-item active": "nav-item"}>
                             <a class="nav-link" href="/modules">Modules</a>
                         </li>
-                        <li class="nav-item">
+                        <li class={props.active == "3" ? "nav-item active": "nav-item"}>
                             <a class="nav-link" href="/faculty">Faculty</a>
                         </li>
                         <li class="nav-item">

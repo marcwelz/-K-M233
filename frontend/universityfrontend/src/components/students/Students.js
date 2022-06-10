@@ -45,7 +45,7 @@ function Students() {
     <div className="products">
         <div className="products-container">
             <h1>Students</h1>
-            <Navigate></Navigate>
+            <Navigate active="1"></Navigate>
             <table className="table">
                 <thead>
                     <tr>

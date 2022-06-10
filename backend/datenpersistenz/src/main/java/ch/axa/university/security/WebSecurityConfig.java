@@ -90,6 +90,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .build();
         manager.createUser(user4);
 
+        UserDetails user5 = User
+                .withUsername("marc.welz")
+                .authorities("ADMIN")
+                .passwordEncoder(passwordEncoder::encode)
+                .password("marc")
+                .build();
+        manager.createUser(user5);
+
         return manager;
     }
 

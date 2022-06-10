@@ -44,8 +44,8 @@ function Modules() {
   return (
     <div className="products">
         <div className="products-container">
-            <h1>Students</h1>
-            <Navigate></Navigate>
+            <h1>Modules</h1>
+            <Navigate active="2"></Navigate>
             <table className="table">
                 <thead>
                     <tr>
