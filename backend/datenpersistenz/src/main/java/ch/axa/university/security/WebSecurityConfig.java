@@ -40,9 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         configurer
                                 .antMatchers(
                                         "/error",
-                                        "/login",
-                                        "/students",
-                                        "/students/*"
+                                        "/login"
                                 )
                                 .permitAll()
                                 .anyRequest()

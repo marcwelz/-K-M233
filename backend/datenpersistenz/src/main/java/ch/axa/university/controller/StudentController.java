@@ -18,7 +18,7 @@ public class StudentController {
 
     @GetMapping("")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public ResponseEntity getStudents() {
+    public ResponseEntity<Iterable<Student>> getStudents() {
         return ResponseEntity.ok().body(studentService.getAllStudents());
     }
 

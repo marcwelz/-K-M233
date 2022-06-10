@@ -8,11 +8,9 @@ function Login() {
     const navigate = useNavigate();
     const [inputPassword, setPassword] = useState("");
     const [inputUsername, setEmail] = useState("");
-    const [passwordError, setpasswordError] = useState("");
     const [emailError, setemailError] = useState("");
-  
+    const [errorMessage, setErrorMessage] = useState("")
 
-  
     const loginSubmit = (e) => {
       e.preventDefault();
         const url = "http://localhost:8080/login"
@@ -26,12 +24,16 @@ function Login() {
         fetch(url, requestOptions)
         .then(response => response.json())
         .then(
-            data => cookies.set('userToken', data)
-        ).finally(
-            navigate("/products")
+          data => {
+            if(data.status === 401) {
+              setErrorMessage(data.message)
+            } else {
+              cookies.set('userToken', data)
+              cookies.set('userName', inputUsername)
+              navigate("/students")
+            }
+          }
         )
-
-        console.log(cookies.get('userToken'))
     };
   
     return (
@@ -50,7 +52,7 @@ function Login() {
                     id="EmailInput"
                     name="EmailInput"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Enter username..."
                     onChange={(event) => setEmail(event.target.value)}
                   />
                   <small id="emailHelp" className="text-danger form-text">
@@ -66,10 +68,8 @@ function Login() {
                     placeholder="Password"
                     onChange={(event) => setPassword(event.target.value)}
                   />
-                  <small id="passworderror" className="text-danger form-text">
-                    {passwordError}
-                  </small>
                 </div>
+                <p className="text-danger form-text">{errorMessage}</p>
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>

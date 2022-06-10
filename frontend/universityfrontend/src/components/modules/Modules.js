@@ -1,15 +1,22 @@
 import './style.css';
 import React, { useEffect, useState } from "react";
 import Cookies from 'universal-cookie';
+import Navigate from '../navigate/Navigate';
+import { useNavigate } from 'react-router-dom';
 
-function Products() {
+function Modules() {
     const cookies = new Cookies();
     const [userToken, setUserToken] = useState()
-    const [product, setProduct] = useState([])
+    const [modules, setModules] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
-        const data = cookies.get('userToken')
-        setUserToken(data.token)
+        try {
+            const data = cookies.get('userToken')
+            setUserToken(data.token)
+        } catch {
+            navigate("/error")
+        }
     }, [])
 
     useEffect(() => {
@@ -17,7 +24,7 @@ function Products() {
     }, [userToken])
 
     function loadProducts() {
-        const url = "http://localhost:8080/products"
+        const url = "http://localhost:8080/modules"
 
         const requestOptions = {
             method: 'GET',
@@ -30,28 +37,31 @@ function Products() {
         fetch(url, requestOptions)
         .then(response => response.json())
         .then(
-            data => setProduct(data)
+            data => setModules(data)
         )
     }
 
   return (
     <div className="products">
         <div className="products-container">
-            <h1>Products</h1>
+            <h1>Students</h1>
+            <Navigate></Navigate>
             <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
+                        <th scope="col">Shortname</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">ECTS Points</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {product.map(p => 
+                    {modules.map(m => 
                         <tr>
-                            <td scope="row">{p.id}</td>
-                            <td>{p.name}</td>
-                            <td>{p.description}</td>
+                            <td scope="row">{m.id}</td>
+                            <td>{m.shortname}</td>
+                            <td>{m.title}</td>
+                            <td>{m.ects_points}</td>
                         </tr>
                     )}
                 </tbody>
@@ -61,4 +71,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Modules;
