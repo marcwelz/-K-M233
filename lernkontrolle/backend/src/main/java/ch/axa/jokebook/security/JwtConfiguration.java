@@ -1,4 +1,4 @@
-package ch.axa.university.security;
+package ch.axa.jokebook.security;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

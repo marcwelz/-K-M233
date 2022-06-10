@@ -1,4 +1,4 @@
-package ch.axa.university.security;
+package ch.axa.jokebook.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

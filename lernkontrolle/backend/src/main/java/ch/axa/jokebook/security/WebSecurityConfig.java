@@ -1,4 +1,4 @@
-package ch.axa.university.security;
+package ch.axa.jokebook.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -38,13 +38,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests(configurer ->
                         configurer
-                                .antMatchers(
-                                        "/error",
-                                        "/login"
-                                )
-                                .permitAll()
                                 .anyRequest()
-                                .authenticated()
+                                .permitAll()
                 );
 
         // JWT Validation Configuration
@@ -59,44 +54,60 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
 
         UserDetails user1 = User
-                .withUsername("user1")
-                .authorities("ADMIN", "STAFF_MEMBER")
+                .withUsername("Elena Stalder")
+                .authorities("OFFICE")
                 .passwordEncoder(passwordEncoder::encode)
                 .password("1234")
                 .build();
         manager.createUser(user1);
 
         UserDetails user2 = User
-                .withUsername("user2")
-                .authorities("STAFF_MEMBER")
+                .withUsername("Marco Schmied")
+                .authorities("OFFICE")
                 .passwordEncoder(passwordEncoder::encode)
                 .password("1234")
                 .build();
         manager.createUser(user2);
 
         UserDetails user3 = User
-                .withUsername("user3")
-                .authorities("ASSISTANT_MANAGER", "STAFF_MEMBER")
+                .withUsername("Hans Weissalles")
+                .authorities("STUDENT")
                 .passwordEncoder(passwordEncoder::encode)
                 .password("1234")
                 .build();
         manager.createUser(user3);
 
         UserDetails user4 = User
-                .withUsername("user4")
-                .authorities("MANAGER", "STAFF_MEMBER")
+                .withUsername("Ugo Schenii")
+                .authorities("STUDENT")
                 .passwordEncoder(passwordEncoder::encode)
                 .password("1234")
                 .build();
         manager.createUser(user4);
 
         UserDetails user5 = User
-                .withUsername("marc.welz")
-                .authorities("ADMIN")
+                .withUsername("Maria Bücher")
+                .authorities("STUDENT")
                 .passwordEncoder(passwordEncoder::encode)
-                .password("marc")
+                .password("1234")
                 .build();
         manager.createUser(user5);
+
+        UserDetails user6 = User
+                .withUsername("Reto Hoffmann")
+                .authorities("COURSE_DIRECTOR")
+                .passwordEncoder(passwordEncoder::encode)
+                .password("1234")
+                .build();
+        manager.createUser(user6);
+
+        UserDetails user7 = User
+                .withUsername("ANNE LORE")
+                .authorities("COURSE_DIRECTOR")
+                .passwordEncoder(passwordEncoder::encode)
+                .password("1234")
+                .build();
+        manager.createUser(user7);
 
         return manager;
     }

@@ -1,4 +1,4 @@
-package ch.axa.university.security.entity;
+package ch.axa.jokebook.security.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

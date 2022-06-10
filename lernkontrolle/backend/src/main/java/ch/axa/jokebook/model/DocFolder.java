@@ -1,10 +1,13 @@
 package ch.axa.jokebook.model;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class DocFolder {
 
     private int id;

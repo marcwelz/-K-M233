@@ -1,4 +1,4 @@
-package ch.axa.university.security;
+package ch.axa.jokebook.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
